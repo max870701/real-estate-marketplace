@@ -20,6 +20,7 @@ app.listen(3000, () => {
     console.log('Server running on port 3000!');
 });
 
+// Mount Routers
 app.use('/api/users', userRouter);
 app.use('/api/auth', authRouter);
 
