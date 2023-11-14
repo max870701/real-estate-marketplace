@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import logger from 'morgan';
 dotenv.config();
 import userRouter from './routes/user.route.js';
 import authRouter from './routes/auth.route.js';
@@ -13,11 +14,13 @@ mongoose.connect(process.env.MONGODB)
 
 const app = express();
 
+// Log Requests
+app.use(logger('dev'));
 // allow json transfer
 app.use(express.json());
 
-app.listen(3000, () => {
-    console.log('Server running on port 3000!');
+app.listen(3001, () => {
+    console.log('Server running on port 3001!');
 });
 
 // Mount Routers
