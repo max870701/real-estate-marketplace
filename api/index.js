@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import logger from 'morgan';
+import cookieParser from 'cookie-parser';
 dotenv.config();
 import userRouter from './routes/user.route.js';
 import authRouter from './routes/auth.route.js';
@@ -18,13 +19,15 @@ const app = express();
 app.use(logger('dev'));
 // allow json transfer
 app.use(express.json());
+// Use cookie parser
+app.use(cookieParser());
 
 app.listen(3001, () => {
     console.log('Server running on port 3001!');
 });
 
 // Mount Routers
-app.use('/api/users', userRouter);
+app.use('/api/user', userRouter);
 app.use('/api/auth', authRouter);
 
 // Add middleware to handle error
