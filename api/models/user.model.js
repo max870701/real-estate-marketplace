@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema({
     },
     avatar: {
         type: String,
-        default: "https://www.freepik.com/free-vector/mysterious-mafia-man-smoking-cigarette_7074311.htm#query=profile%20avatar&position=9&from_view=keyword&track=ais&uuid=4f213559-b9ac-40d3-8886-339c1afe1ce8"
+        default: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
     },
 }, {timestamps: true});
 
