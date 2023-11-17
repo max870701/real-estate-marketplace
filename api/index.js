@@ -6,6 +6,7 @@ import cookieParser from 'cookie-parser';
 dotenv.config();
 import userRouter from './routes/user.route.js';
 import authRouter from './routes/auth.route.js';
+import listingRouter from './routes/listing.route.js';
 
 mongoose.connect(process.env.MONGODB)
 .then(() => {
@@ -29,6 +30,7 @@ app.listen(3001, () => {
 // Mount Routers
 app.use('/api/user', userRouter);
 app.use('/api/auth', authRouter);
+app.use('/api/listing', listingRouter);
 
 // Add middleware to handle error
 app.use((err, req, res, next) => {
