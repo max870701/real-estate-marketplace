@@ -8,8 +8,8 @@ export default defineConfig({
       '/api': {
         target: 'http://localhost:3001',
         secure: false,
-      }
-    }
+      },
+    },
   },
   plugins: [react()],
 })
