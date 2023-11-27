@@ -10,7 +10,6 @@ import PrivateRoute from "./components/PrivateRoute"
 import UpdateListing from "./pages/UpdateListing"
 import Listing from "./pages/Listing"
 import Search from "./pages/Search"
-import OpenGraph from "./components/OpenGraph"
 
 
 export default function App() {
