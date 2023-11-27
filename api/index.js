@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import logger from "morgan";
+//import logger from "morgan";
 import cookieParser from "cookie-parser";
 dotenv.config();
 import userRouter from "./routes/user.route.js";
@@ -21,7 +21,7 @@ const __dirname = path.resolve();
 const app = express();
 
 // Log Requests
-app.use(logger("dev"));
+// app.use(logger("dev"));
 // allow json transfer
 app.use(express.json());
 // Use cookie parser
