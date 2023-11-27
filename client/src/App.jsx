@@ -16,7 +16,6 @@ import OpenGraph from "./components/OpenGraph"
 export default function App() {
   return (
     <div className="App">
-      <OpenGraph />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
